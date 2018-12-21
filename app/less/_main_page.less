@@ -1,0 +1,367 @@
+@bg_btn: #1268d6;/*Фон кнопок*/
+@cart_team_bg: #1e252d;/*Цвет карточки членов команды*/
+@bg_icon_footer: #1c242b; /*Фон иконок в футоре*/
+@bg_contact_icon: #656d82;/*фон иконок в секции контактн. инф, фон секции наша команда, фон иконок в footer, разделительная линия в footer*/
+@bg_yellow_icon: #e7c318 ;/*цвет вспомогательных иконок*/
+@bg_white_icon: #fff;/* фон иконок соц. сет. в header,цвет вспомогательных иконок в секции статистика */
+
+/*Основные цвета шрифтов*/
+@color_white: #fff;
+@color_dark: #1c242b;
+@color_grey: #656d82;
+@color_red: #f50203;
+
+/*Стили текста*/
+@title_section: 30px "HelveticaBold";
+@text_btn: 30px "HelveticaRegular";
+@main_title: 86.75px "HelveticaBold";
+@link_in_header: 18px "HelveticaBold";
+@text_logo: bold 18px "Arial";
+@promo_text_header: 30px "HelveticaRegular";
+@label_form: 30px "HelveticaRegular";
+@placeholder_form: 18px "Arial";
+@link_footer: 14px "HelveticaRegular";
+@description_section: 24px "HelveticaBold";
+
+
+/*Style main*/
+.content{
+    width: 1470px;
+    margin: 0 auto;
+}
+.header{
+    position: relative;
+    min-height: 905px;
+    background: url('../img/main/header/header-bg.jpg') no-repeat top center;
+}
+.header_top{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: rgba(28,36,43,0.85);
+    display: flex;
+    justify-content: flex-start;
+    padding: 17px 6% 22px 6%;
+    z-index: 2;
+    .logo_header{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .text_logo{
+        color: @color_white;
+        font: @text_logo;
+        line-height: normal;
+        padding-top: 9px;
+        margin-left: 9px;
+        margin-bottom: 0;
+    }
+    .image_logo{
+        width: 85px;
+        height: 70px;
+        background: url('../img/main/logo.svg') no-repeat center;
+        background-size: contain;
+        
+    }
+    .main_menu{
+        flex-grow: 2;
+        text-align: right;
+        line-height: 72px;
+    }
+    .item_menu_main{
+        vertical-align: middle;
+        display: inline-block;
+        color: @color_white;
+        font:@link_in_header;
+        margin-left: 70px;
+    }
+    .item_menu_main:first-child{
+        margin-left: 0;
+    }
+}
+.header_slide .content{
+    width: 1300px;
+    position: relative;
+}
+.header_slide{
+    padding-top: 215px;
+    padding-left: 75px;
+    position: relative;
+    .main_title{
+        color: @color_white;
+        font:@main_title;
+        margin-top: 0;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+    .promo_text_header{
+        color: @color_grey;
+        font:@promo_text_header;
+        margin-bottom: 49px;
+    }
+}
+.btn_site{
+    background: @bg_btn;
+    padding: 0 70px;
+    color: @color_white;
+    font: @text_btn;
+    margin: 0;
+    display: inline-block;
+    line-height: 88px;
+    border-radius: 44px;
+}
+.btn_site:hover{
+    color: @color_white;
+}
+.social_panel_header{
+    position: absolute;
+    right: -100px;
+    bottom: 14px;
+
+}
+.item_head_social{
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    margin: 0 12px;
+
+}
+.item_head_social.inst{
+    background: url('../img/main/header/instagram.svg') no-repeat center;
+    background-size: contain;
+}
+.item_head_social.youtube{
+    background: url('../img/main/header/youtube.svg') no-repeat center;
+    background-size: contain;
+}
+.item_head_social.twitter{
+    background: url('../img/main/header/twitter.svg') no-repeat center;
+    background-size: contain;
+}
+.item_head_social.facebook{
+    background: url('../img/main/header/facebook.svg') no-repeat center;
+    background-size: contain;
+}
+/*Services block main*/
+.services_block .content{
+    width: 1200px;
+
+}
+.services_block{
+    background: url('../img/main/features/features-bg.jpg') no-repeat top center;
+    padding: 124px 0 45px 0;
+}
+.services_content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .item_services{
+        width: 33.3333%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .img_services{
+        width: 230px;
+        line-height: 230px;
+        border-radius: 50%;
+        background:@bg_icon_footer;
+        display: inline-block;
+        margin-bottom: 35px;
+        img{
+            max-width: 95%;
+        }
+    }
+    .text_item_services{
+        color: @color_dark;
+        font:@description_section;
+        margin-bottom: 0;
+    }
+}
+/*Consultation block*/
+.consultation_block{
+    background: #1c242b;
+    padding: 90px 0 120px 0;
+    .content_consultation{
+        padding-top: 80px;
+    }
+    .title_page{
+        color: @color_white;
+        font:@title_section;
+        margin-top: 0;
+        margin-bottom: 80px;
+        text-transform: uppercase;
+        padding-left: 30px;
+        position: relative;
+    }
+    .title_page:before{
+        content: '';
+        width: 5px;
+        height: 42px;
+        background: @bg_yellow_icon;
+        position: absolute;
+        left: 0;
+        top:-6px;
+        transform: rotate(25deg);
+    }
+    .item_consultation_text{
+        color: @color_white;
+        font: 24px "HelveticaRegular";
+        margin-bottom: 50px;
+        position: relative;
+        padding-left: 30px;
+    }
+    .item_consultation_text:before{
+        content: '';
+        width: 24px;
+        height: 20px;
+        position: absolute;
+        left: -12px;
+        top: 3px;
+        background: url('../img/main/consulting/checkmark.svg') no-repeat center;
+        background-size: contain;
+    }
+    
+    .item_consultation_text:nth-child(4):before{
+        left: -15px;
+    }
+    .item_consultation_text:nth-child(5):before{
+        left: -28px;
+    }
+    .img_consultation{
+        text-align: right;
+        padding-right: 25px;
+    }
+    .img_consultation img{
+        max-width: 100%;
+    }
+    
+}
+/*Block team*/
+.block_team_main{
+    background: #656d82 url('../img/bg/bg_team.png') no-repeat top center;
+    padding-bottom: 120px;
+    .title_page{
+        color: @color_white;
+        font:@title_section;
+        margin-top: 0;
+        margin-bottom: 80px;
+        text-transform: uppercase;
+        position: relative;
+        
+        text-align: center;
+        span{
+            position: relative;
+            padding-left: 30px;
+        }
+    }
+    .title_page span:before{
+        content: '';
+        width: 5px;
+        height: 42px;
+        background: @bg_yellow_icon;
+        position: absolute;
+        left: 0;
+        top:-6px;
+        transform: rotate(25deg);
+    }
+}
+.consultation_bottom_info{
+    padding:0 70px;
+    display: flex;
+    justify-content: space-between;
+    .item_bottom_info{
+        width: 33%;
+        padding-left: 20px;
+    }
+    .title_consultation_info{
+        color: @color_dark;
+        font:@description_section;
+        margin-bottom: 25px;
+        position: relative;
+        span{
+            font-size: 70px;
+        }
+    }
+    .title_consultation_info:before{
+        content: '';
+        width: 5px;
+        height: 46px;
+        background: #fff;
+        position: absolute;
+        left: -20px;
+        top:-6px;
+        transform: rotate(25deg);
+    }
+    .text_info_consultation{
+        color: @color_white;
+        font: 20px "HelveticaRegular";
+        margin-bottom: 0;
+        line-height: 1.5em;
+    }
+}
+.content_team{
+    padding:0 70px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom:2px solid #1c242b;
+    margin-bottom: 120px;
+    .item_cart_team{
+        width: 30%;
+        background: url('../img/elements/cart_team.jpg');
+        padding: 50px 55px;
+        -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.25);
+        -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.25);
+        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.25);
+        text-align: center;
+        margin-bottom: 135px;
+    }
+    .photo_user_team{
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        background: #656d82;
+        position: relative;
+        display: inline-block;
+        -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.25);
+        -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.25);
+        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.25);
+        margin-bottom: 40px;
+        img{
+            max-width: 100%;
+            border-radius: 50%;
+        }
+
+    }
+    .link_facebook{
+        position: absolute;
+        right: 0;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background:#161d22 url('../img/main/header/facebook.svg') no-repeat center;
+        background-size: contain;
+        -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.25);
+        -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.25);
+        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.25);
+    }
+    .name_team{
+        color: @color_white;
+        font:24px "HelveticaRegular";
+        padding-bottom:18px ;
+        margin-bottom: 14px;
+        text-align: left;
+        border-bottom: 1px solid #656d82;
+    }
+    .position_team{
+        color: @color_grey;
+        font:20px "HelveticaRegular";
+        margin-bottom: 22px;
+        text-align: left;
+    }
+    .info_user_team{
+        color: @color_white;
+        font: 18px "HelveticaRegular";
+        text-align: left;
+        line-height: 1.5em;
+    }
+}
