@@ -1,0 +1,4 @@
+echo "dist","__pycache__" > .gitignore
+echo "node_modules","__pycache__" > .gitignore
+
+echo "__pycache__" > .gitignore

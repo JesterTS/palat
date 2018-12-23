@@ -20,5 +20,13 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglifyjs": "^0.6.2",
     "imagemin-pngquant": "^5.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JesterTS/palat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JesterTS/palat/issues"
+  },
+  "homepage": "https://github.com/JesterTS/palat#readme"
 }
