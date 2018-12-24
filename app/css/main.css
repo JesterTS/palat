@@ -117,6 +117,10 @@ ul {
 .header_top .item_menu_main:hover {
   color: #bdbdbd;
 }
+.header_top .item_menu_main.disable {
+  opacity: 0.3;
+  cursor: auto;
+}
 .header_top .item_menu_main:first-child {
   margin-left: 0;
 }
@@ -667,6 +671,10 @@ ul {
   color: #fff;
   text-decoration: underline;
 }
+.footer .menu_item_footer.disable {
+  opacity: 0.3;
+  cursor: auto;
+}
 .footer .item_head_social {
   display: inline-block;
   width: 47px;
@@ -863,16 +871,22 @@ a:not([href]):not([tabindex]):hover {
   position: relative;
   padding-left: 5px;
 }
-.list_services .item_services_segment:before {
-  content: '';
+.list_services .item_services_segment span {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 90%;
+}
+.list_services .check_icon {
   width: 24px;
   height: 20px;
-  position: absolute;
+  display: inline-block;
+  vertical-align: top;
   left: -42px;
   top: 3px;
-  background: url(../img/main/consulting/checkmark.svg) no-repeat center;
-  -webkit-background-size: contain;
-  background-size: contain;
+  margin-right: 10px;
+}
+.list_services .check_icon img {
+  max-width: 24px;
 }
 .full_list_srvices {
   display: none;
@@ -1073,6 +1087,8 @@ a:not([href]):not([tabindex]):hover {
 .contact_content_page {
   padding: 188px 6% 115px 6%;
   position: relative;
+  height: 100vh;
+  z-index: 10;
 }
 .contact_content_page .title_contact {
   color: #1c242b;
@@ -1120,17 +1136,19 @@ a:not([href]):not([tabindex]):hover {
 .contact_page_block {
   padding: 25px 130px 55px 130px;
   background: #1c242b;
+  position: relative;
+  z-index: 10;
 }
 .contact_page_block .map_link {
-  color: #656d82;
+  color: #656d82 !important;
   font: 20px "HelveticaRegular";
   display: block;
   padding-left: 80px;
-  text-decoration: underline;
+  text-decoration: underline !important;
   margin-bottom: 75px;
 }
 .contact_page_block .map_link.active {
-  color: #fff;
+  color: #fff !important;
 }
 .contact_page_block .text_contact_info {
   padding-left: 80px;
@@ -1151,21 +1169,47 @@ a:not([href]):not([tabindex]):hover {
 .contact_page_block .text_contact_info:last-child i {
   top: 1px;
 }
+.item_contact_colum {
+  margin-bottom: 35px;
+}
 .open_modal_contact {
-  text-decoration: underline;
+  text-decoration: underline !important;
   padding-left: 80px;
-  color: #1268d6;
+  color: #1268d6 !important;
   margin-bottom: 25px;
   position: relative;
   font: 20px "HelveticaRegular";
   line-height: 1.5em;
   display: inline-block;
-  margin-top: 35px;
 }
 .open_modal_contact i {
   position: absolute;
   left: 0;
   top: 0px;
+}
+.map_open_bottom {
+  display: none;
+}
+#dnepr {
+  display: none;
+}
+.content_modal_form .form_block {
+  padding-left: 0;
+}
+.modal_form.contact_form {
+  padding-top: 200px;
+  max-width: 840px;
+  z-index: 15;
+  background: url('../img/main/contacts/laptop-bg.jpg') no-repeat top center;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+.maps_block {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100vh;
 }
 /*Адаптивность*/
 @media screen and (max-width: 1640px) {
@@ -1177,6 +1221,9 @@ a:not([href]):not([tabindex]):hover {
   }
   .social_panel_header {
     right: 0;
+  }
+  .contact_page_block {
+    padding: 25px 50px 50px 50px;
   }
 }
 @media screen and (max-width: 1480px) {
@@ -1221,14 +1268,27 @@ a:not([href]):not([tabindex]):hover {
   }
 }
 @media screen and (max-width: 1360px) {
+  .contact_page_block .map_link {
+    font-size: 16px;
+  }
   .header_slide {
     padding-left: 0;
   }
   .contact_block {
     background-position-x: 156%;
   }
+  .contact_page_block .text_contact_info span {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 1280px) {
+  .contact_page_block .text_contact_info {
+    font-size: 18px;
+    padding-left: 50px;
+  }
+  .contact_page_block .map_link {
+    padding-left: 0;
+  }
   .header_top .item_menu_main {
     margin-left: 15px;
   }
@@ -1284,8 +1344,38 @@ a:not([href]):not([tabindex]):hover {
   }
 }
 @media screen and (max-width: 996px) {
+  body {
+    position: relative;
+  }
+  .maps_block {
+    padding-top: 111px;
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    height: 450px;
+  }
+  .maps_block > div {
+    top: 111px !important;
+  }
+  .contact_content_page {
+    padding-top: 70px;
+    height: auto;
+  }
   .sertificat_block .content_sertificat {
     display: block;
+  }
+  .modal_form.contact_form {
+    height: 100%;
+    top: 0;
+    padding-top: 125px;
+  }
+  .contact_content_page .title_contact {
+    font-size: 25px;
+  }
+  .modal_form.contact_form .close_modal {
+    top: 120px;
+    z-index: 150;
   }
   .team_block_page .photo_user_team {
     margin: 0 auto 45px auto;
@@ -1402,6 +1492,9 @@ a:not([href]):not([tabindex]):hover {
   }
   .team_block_page .item_slid_team {
     margin: 0;
+  }
+  .header_slide {
+    padding-bottom: 35px;
   }
 }
 @media screen and (max-width: 540px) {

@@ -79,6 +79,10 @@
 .header_top .item_menu_main:hover {
   color: #bdbdbd;
 }
+.header_top .item_menu_main.disable {
+  opacity: 0.3;
+  cursor: auto;
+}
 .header_top .item_menu_main:first-child {
   margin-left: 0;
 }
@@ -629,6 +633,10 @@
   color: #fff;
   text-decoration: underline;
 }
+.footer .menu_item_footer.disable {
+  opacity: 0.3;
+  cursor: auto;
+}
 .footer .item_head_social {
   display: inline-block;
   width: 47px;
@@ -825,16 +833,22 @@ a:not([href]):not([tabindex]):hover {
   position: relative;
   padding-left: 5px;
 }
-.list_services .item_services_segment:before {
-  content: '';
+.list_services .item_services_segment span {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 90%;
+}
+.list_services .check_icon {
   width: 24px;
   height: 20px;
-  position: absolute;
+  display: inline-block;
+  vertical-align: top;
   left: -42px;
   top: 3px;
-  background: url(../img/main/consulting/checkmark.svg) no-repeat center;
-  -webkit-background-size: contain;
-  background-size: contain;
+  margin-right: 10px;
+}
+.list_services .check_icon img {
+  max-width: 24px;
 }
 .full_list_srvices {
   display: none;
@@ -1035,6 +1049,8 @@ a:not([href]):not([tabindex]):hover {
 .contact_content_page {
   padding: 188px 6% 115px 6%;
   position: relative;
+  height: 100vh;
+  z-index: 10;
 }
 .contact_content_page .title_contact {
   color: #1c242b;
@@ -1082,17 +1098,19 @@ a:not([href]):not([tabindex]):hover {
 .contact_page_block {
   padding: 25px 130px 55px 130px;
   background: #1c242b;
+  position: relative;
+  z-index: 10;
 }
 .contact_page_block .map_link {
-  color: #656d82;
+  color: #656d82 !important;
   font: 20px "HelveticaRegular";
   display: block;
   padding-left: 80px;
-  text-decoration: underline;
+  text-decoration: underline !important;
   margin-bottom: 75px;
 }
 .contact_page_block .map_link.active {
-  color: #fff;
+  color: #fff !important;
 }
 .contact_page_block .text_contact_info {
   padding-left: 80px;
@@ -1113,19 +1131,45 @@ a:not([href]):not([tabindex]):hover {
 .contact_page_block .text_contact_info:last-child i {
   top: 1px;
 }
+.item_contact_colum {
+  margin-bottom: 35px;
+}
 .open_modal_contact {
-  text-decoration: underline;
+  text-decoration: underline !important;
   padding-left: 80px;
-  color: #1268d6;
+  color: #1268d6 !important;
   margin-bottom: 25px;
   position: relative;
   font: 20px "HelveticaRegular";
   line-height: 1.5em;
   display: inline-block;
-  margin-top: 35px;
 }
 .open_modal_contact i {
   position: absolute;
   left: 0;
   top: 0px;
+}
+.map_open_bottom {
+  display: none;
+}
+#dnepr {
+  display: none;
+}
+.content_modal_form .form_block {
+  padding-left: 0;
+}
+.modal_form.contact_form {
+  padding-top: 200px;
+  max-width: 840px;
+  z-index: 15;
+  background: url('../img/main/contacts/laptop-bg.jpg') no-repeat top center;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+.maps_block {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100vh;
 }

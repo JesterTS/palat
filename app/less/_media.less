@@ -8,6 +8,9 @@
     .social_panel_header{
         right: 0;
     }
+    .contact_page_block{
+        padding: 25px 50px 50px 50px;
+    }
 }
 @media screen and(max-width:1480px){
     .content{
@@ -52,14 +55,28 @@
     
 }
 @media screen and(max-width:1360px){
+    .contact_page_block .map_link{
+        font-size: 16px;
+    }
     .header_slide{
         padding-left: 0;
     }
     .contact_block {
         background-position-x: 156%;
     }
+    .contact_page_block .text_contact_info span{
+        font-size: 20px;
+    }
+    
 }
 @media screen and(max-width:1280px){
+    .contact_page_block .text_contact_info{
+        font-size: 18px;
+        padding-left: 50px;
+    }
+    .contact_page_block .map_link{
+       padding-left: 0;
+    }
     .header_top .item_menu_main{
         margin-left: 15px;
     }
@@ -114,8 +131,38 @@
     }
 }
 @media screen and(max-width:996px){
+    body{
+        position: relative;
+    }
+    .maps_block{
+        padding-top: 111px;
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        height: 450px;
+    }
+    .maps_block > div{
+        top:111px !important;
+    }
+    .contact_content_page{
+        padding-top: 70px;
+        height: auto;
+    }
     .sertificat_block .content_sertificat{
         display: block;
+    }
+    .modal_form.contact_form{
+        height: 100%;
+        top: 0;
+        padding-top: 125px;
+    }
+    .contact_content_page .title_contact{
+        font-size: 25px;
+    }
+    .modal_form.contact_form .close_modal{
+        top: 120px;
+        z-index: 150;
     }
     .team_block_page .photo_user_team{
         margin: 0 auto 45px auto;
@@ -233,6 +280,9 @@
     }
     .team_block_page .item_slid_team{
         margin: 0;
+    }
+    .header_slide{
+        padding-bottom: 35px;
     }
 }
 @media screen and(max-width:540px){
