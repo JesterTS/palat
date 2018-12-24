@@ -84,6 +84,9 @@
         opacity: 0.3;
         cursor: auto;
     }
+    .item_menu_main.active{
+        color: @bg_yellow_icon;
+    }
     .item_menu_main:first-child{
         margin-left: 0;
     }
@@ -546,6 +549,8 @@
 .footer{
     padding: 45px 0 70px 0;
     background: #1c242b;
+    position: relative;
+    z-index: 20;
     .logo_header{
         display: flex;
         justify-content: flex-start;
@@ -961,9 +966,10 @@ a:not([href]):not([tabindex]),a:not([href]):not([tabindex]):focus, a:not([href])
     
 }
 .contact_content_page{
-    padding: 188px 6% 115px 6%;
+    padding: 77px 6% 115px 6%;
     position: relative;
     height: 100vh;
+    top:111px;
     z-index: 10;
     .title_contact{
         color: @color_dark;

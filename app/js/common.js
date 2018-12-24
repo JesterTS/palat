@@ -53,4 +53,14 @@ function CustominitMap(LatId, lngId,th) {
     });
     google.maps.event.addDomListener(window, "load", marker);
 }
+/*Открытие форы на страницы контактов */
+function openContactForm(){
+    var displayForm = $('.modal_form').css('display');
+    if(displayForm === 'none'){
+        $('.text_btn_contact_show').html('Показать карты');
 
+    }else{
+        $('.text_btn_contact_show').html('Задаты питання');
+    }
+    $('.modal_form').slideToggle(500);
+}

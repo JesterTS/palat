@@ -83,6 +83,9 @@
   opacity: 0.3;
   cursor: auto;
 }
+.header_top .item_menu_main.active {
+  color: #e7c318;
+}
 .header_top .item_menu_main:first-child {
   margin-left: 0;
 }
@@ -594,6 +597,8 @@
 .footer {
   padding: 45px 0 70px 0;
   background: #1c242b;
+  position: relative;
+  z-index: 20;
 }
 .footer .logo_header {
   display: -webkit-box;
@@ -1047,9 +1052,10 @@ a:not([href]):not([tabindex]):hover {
   background: #1c242b;
 }
 .contact_content_page {
-  padding: 188px 6% 115px 6%;
+  padding: 77px 6% 115px 6%;
   position: relative;
   height: 100vh;
+  top: 111px;
   z-index: 10;
 }
 .contact_content_page .title_contact {

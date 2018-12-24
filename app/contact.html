@@ -92,7 +92,7 @@
                 <a class="item_menu_main disable">Нормативно правова база</a>
                 <a href="consultation.html" class="item_menu_main">Консультації</a>
                 <a class="item_menu_main disable">Обговорення</a>
-                <a href="contact.html" class="item_menu_main">Підрозділи і контакти</a>
+                <a href="contact.html" class="item_menu_main active">Підрозділи і контакти</a>
                 <a class="item_menu_main disable">Блог</a>
                 <a class="item_menu_main disable">Школа АМКУ</a>
             </nav>
@@ -101,19 +101,18 @@
 
     </header>
     <!--Content conact-->
-    <div class="maps_block" id="map">
+    
                 
     </div>
     <div class="contact_content_page">
-        
         <h3 class="title_contact">Підрозділи та <br>
             представництва</h3>
         <div class="row">
             <div class="col-12 col-lg-8">
 
                 <div class="tabs_contact">
-                    <a onclick="openTabs(this,'kiev')" class="item_tabs active">Київ</a>
-                    <a onclick="openTabs(this,'dnepr')" class="item_tabs">Дніпро</a>
+                    <a onclick="openTabs(this,'kiev');CustominitMap(48.46471 , 35.04618, this);" class="item_tabs active">Київ</a>
+                    <a onclick="openTabs(this,'dnepr');CustominitMap(50.42528, 30.51337 , this);" class="item_tabs">Дніпро</a>
                 </div>
                 <div class="contact_page_block" id="kiev">
                     <div class="row">
@@ -170,12 +169,9 @@
                                 </div>
                             </div>
                     </div>
-                    <a onclick="$('.modal_form').slideToggle(500);$(this).hide();$('.map_open_bottom').show();" class="open_modal_contact hide_btn_modal">
-                        <i><img src="img/icon/chat.png" alt=""></i> Задаты питання
+                    <a onclick="openContactForm();" class="open_modal_contact">
+                        <i><img src="img/icon/chat.png" alt=""></i> <span class="text_btn_contact_show">Задаты питання</span>
                     </a>
-                    <a onclick="$('.modal_form').slideToggle(500);$(this).hide();$('.hide_btn_modal').show();" class="open_modal_contact map_open_bottom">
-                            <i><img src="img/icon/chat.png" alt=""></i> Показать карты
-                        </a>
                 </div>
                 <div class="contact_page_block" id="dnepr">
                         <div class="row">
@@ -232,15 +228,14 @@
                                     </div>
                                 </div>
                         </div>
-                        <a onclick="$('.modal_form').slideToggle(500);$(this).hide();$('.map_open_bottom').show();" class="open_modal_contact hide_btn_modal">
-                            <i><img src="img/icon/chat.png" alt=""></i> Задаты питання
+                        <a onclick="openContactForm();" class="open_modal_contact">
+                            <i><img src="img/icon/chat.png" alt=""></i> <span class="text_btn_contact_show">Задаты питання</span>
                         </a>
-                        <a onclick="$('.modal_form').slideToggle(500);$(this).hide();$('.hide_btn_modal').show();" class="open_modal_contact map_open_bottom">
-                                <i><img src="img/icon/chat.png" alt=""></i> Показать карты
-                            </a>
+                        
                     </div>
             </div>
         </div>
+        <div class="maps_block" id="map"></div>
     </div>
 
 
