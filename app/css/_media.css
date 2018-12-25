@@ -2,9 +2,6 @@
   .header_top .item_menu_main {
     margin-left: 40px;
   }
-  .contact_block {
-    background-position-x: 125%;
-  }
   .social_panel_header {
     right: 0;
   }
@@ -61,7 +58,7 @@
     padding-left: 0;
   }
   .contact_block {
-    background-position-x: 156%;
+    background-position-x: 60%;
   }
   .contact_page_block .text_contact_info span {
     font-size: 20px;
@@ -84,9 +81,6 @@
   .content_team,
   .consultation_bottom_info {
     padding: 0 25px;
-  }
-  .contact_block {
-    background-position-x: 187%;
   }
   .footer .menu_item_footer {
     font-size: 12px;
@@ -126,7 +120,7 @@
     width: 32%;
   }
   .contact_block {
-    background-position-x: 372%;
+    background-position-x: 54%;
   }
 }
 @media screen and (max-width: 996px) {
@@ -178,7 +172,7 @@
     display: block;
   }
   .contact_block {
-    background-position-x: 0;
+    background: url('../img/main/contacts/laptop-bg.jpg') no-repeat top center;
     -webkit-background-size: cover;
             background-size: cover;
   }
@@ -287,6 +281,46 @@
     width: 200px;
     height: 200px;
   }
+  .sertificat_block,
+  .list_services {
+    padding: 0 0 70px 0;
+  }
+  .form_block .title_contact {
+    font-size: 25px;
+  }
+  .form_block .subtitle_contacts {
+    font-size: 20px;
+  }
+  .team_block_page .content {
+    padding: 0;
+  }
+  .team_block_page .number_team_phone i {
+    font-size: 25px;
+  }
+  .team_block_page .item_slid_team {
+    padding: 30px 15px;
+  }
+  .team_block_page .link_facebook {
+    top: -65px;
+  }
+  .team_block_page .number_team_phone {
+    font-size: 20px;
+  }
+  .list_services .item_services_segment span {
+    max-width: 80%;
+  }
+  .sertificat_block .title_block {
+    font-size: 25px;
+    text-align: center;
+  }
+  .list_services .title_block,
+  .team_block_page .title_page span {
+    font-size: 25px;
+    text-align: center;
+  }
+  .list_services .title_block:before {
+    left: 10px;
+  }
   .consultation_page .header {
     min-height: 740px;
   }
@@ -314,6 +348,9 @@
     padding: 0 35px;
     font-size: 20px;
     line-height: 60px;
+  }
+  .sertificat_block .title_block:before {
+    left: 35px;
   }
   .services_content .item_services {
     width: 100%;
