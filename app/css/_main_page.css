@@ -1033,6 +1033,7 @@ a:not([href]):not([tabindex]):hover {
   -webkit-background-size: cover;
           background-size: cover;
   position: relative;
+  z-index: 35;
   margin-bottom: -270px;
   -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.25);
