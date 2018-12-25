@@ -17,7 +17,8 @@ function initMap() {
     });
 }
 function CityinitMap(LatId, lngId,th) {
-
+    $(th + '.map_link').removeClass('active');
+    $(th + '.first_link_map').addClass('active');
     var centerLatLng = new google.maps.LatLng(LatId, lngId);
     var mapOptions = {
         center: centerLatLng,
